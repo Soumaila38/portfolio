@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio de KABORE Soumaila">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio - KABORE Soumaila</title>
+  <!-- Lien vers la feuille de style CSS -->
+  <link rel="stylesheet" href="Styles/style.css">
+</head>
+<body>
+
+  <!-- 
+    Barre de navigation (header) 
+    Contient le logo/nom et les liens vers les sections principales du site
+  -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">KABORE Soumaila</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 
+    Section Hero 
+    Contient une phrase d’accroche et un bouton pour voir les projets 
+  -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Je suis <span class="prenom">Soumaila</span>, Développeur en devenir passionné par le web et le design !</h1>
+      <button class="btn-hero" onclick="scrollToSection('projects')">Voir mes projets</button>
+    </div>
+    <div class="hero-illustration">
+      <!-- Remplacez cette image par l'illustration de votre choix -->
+      <img src="imgs/dev.webp" alt="Illustration Hero">
+    </div>
+  </section>
+
+  <!-- 
+    Section À propos 
+    Présente une brève description et un bouton pour télécharger le CV 
+  -->
+  <section id="about" class="about-section">
+    <h2>À propos</h2>
+    <div class="about-container">
+      <!-- Photo de profil -->
+      <div class="profile-pic">
+        <!-- Remplacez cette image par la photo de votre choix -->
+        <img src="imgs/soum.webp" alt="Photo de profil">
+      </div>
+      <!-- Texte de présentation -->
+      <div class="about-text">
+        <p>
+          Je m'appelle <strong>KABORE Soumaila</strong>, passionné par la création de sites web modernes et interactifs.
+          Je suis actuellement étudiant(e) en développement web, et je possède des connaissances en JavaScript, HTML et CSS.
+          J’aspire à transformer mes idées en projets concrets tout en continuant à apprendre chaque jour.
+        </p>
+        <a class="btn-cv" href="#" target="_blank">Télécharger mon CV</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    Section Projets 
+    Montre quelques projets sous forme de cartes 
+  -->
+  <section id="projects" class="projects-section">
+    <h2>Mes Projets</h2>
+    <div class="projects-container">
+      <!-- Projet 1 -->
+      <div class="project-card">
+        <h3>Mini-projet 1</h3>
+        <p>Un mini-jeu interactif en JavaScript pour tester la manipulation du DOM.</p>
+        <a href="#" class="btn-project">Voir</a>
+      </div>
+      <!-- Projet 2 -->
+      <div class="project-card">
+        <h3>Mini-projet 2</h3>
+        <p>Une application web pour gérer ses tâches et son emploi du temps.</p>
+        <a href="#" class="btn-project">Voir</a>
+      </div>
+      <!-- Projet 3 -->
+      <div class="project-card">
+        <h3>Mini-projet 3</h3>
+        <p>Un site vitrine responsive pour un client fictif.</p>
+        <a href="#" class="btn-project">Voir</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    Section Compétences 
+    Présente les soft skills et hard skills sous forme de barres de progression 
+  -->
+  <section id="skills" class="skills-section">
+    <h2>Mes Compétences</h2>
+    <div class="skills-container">
+      <div class="soft-skills">
+        <h3>Competences Générales</h3>
+        <div class="skill">
+          <span>Gestion de projet</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Résolution de problèmes</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 70%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Data Scientist</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 90%;"></div>
+          </div>
+        </div>
+      </div>
+      <div class="hard-skills">
+        <h3>Competences rares</h3>
+        <div class="skill">
+          <span>HTML</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 85%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>Gestion de base de données</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 80%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>JavaScript</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 75%;"></div>
+          </div>
+        </div>
+        <div class="skill">
+          <span>VS Code</span>
+          <div class="progress-bar">
+            <div class="progress" style="width: 95%;"></div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 
+    Section Contact 
+    Contient un formulaire pour contacter KABORE Soumaila 
+  -->
+  <section id="contact" class="contact-section">
+    <h2>Vous avez un projet en tête ?<br>N'hésitez pas à me contacter</h2>
+    <form class="contact-form" onsubmit="return handleFormSubmit(event)">
+      <!-- Nom et prénom -->
+      <div class="form-group">
+        <label for="firstName">Votre prénom</label>
+        <input type="text" id="firstName" name="firstName" required>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Votre nom</label>
+        <input type="text" id="lastName" name="lastName" required>
+      </div>
+      <!-- Sujet -->
+      <div class="form-group">
+        <label for="subject">Votre sujet</label>
+        <input type="text" id="subject" name="subject" required>
+      </div>
+      <!-- Message -->
+      <div class="form-group">
+        <label for="message">Votre message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <!-- Bouton d'envoi -->
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
+
+  <!-- 
+    Pied de page 
+    Contient simplement un texte de copyright ou autre mention 
+  -->
+  <footer>
+    <p>&copy; 2025 - KABORE Soumaila</p>
+  </footer>
+
+  <!-- Lien vers le fichier JavaScript -->
+  <script src="JS/script.js"></script>
+</body>
+</html>
